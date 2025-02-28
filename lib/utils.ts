@@ -8,9 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getImagePath(path: string): string {
-  return basePath + "/images" + path;
+  return "/images" + path;
 }
 
 export function getNotFoundImage() {
-  return basePath + "/images/not_found.jpg";
+  return "/images/not_found.jpg";
 }
