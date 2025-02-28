@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
-const basePath = "/jeremys-film-reviews";
+//const basePath = "/jeremys-film-reviews";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
