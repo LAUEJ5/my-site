@@ -22,8 +22,8 @@ export default function Home() {
         <div className="space-y-4">
           <h1 className="text-3xl font-bold">Welcome to Jeremy&apos;s Film Reviews</h1>
           <p className="text-lg">
-            I&apos;m a passionate film critic with a keen eye for cinematic excellence. Join me on my journey through
-            the world of movies!
+            I got into film during COVID when I had nothing else to do. Watching the IMDb top 100 launched my journey into what would later become a full-blown hobby. 
+            Hope you enjoy my thoughts and perspectives on my revied collection of films.
           </p>
           <Button asChild>
             <Link href="https://letterboxd.com/jeremylaue/" target="_blank" rel="noopener noreferrer">
