@@ -45,11 +45,10 @@ export default function ReviewPage({ params }: Props) {
         </div>
         <div className="md:w-2/3">
           <h2 className="text-2xl font-semibold mb-4">Review</h2>
-          <div className="prose dark:prose-invert">
-            {review.fullReview.split("\n").map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
+          <div
+            className="prose dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: review.fullReview }}
+          />
         </div>
       </div>
     </div>
