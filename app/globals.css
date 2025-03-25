@@ -75,3 +75,9 @@
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+  .indented-prose p {
+    text-indent: 1.5em;
+    margin-top: 1em;
+  }
+}
