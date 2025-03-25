@@ -46,7 +46,7 @@ export default function ReviewPage({ params }: Props) {
         <div className="md:w-2/3">
           <h2 className="text-2xl font-semibold mb-4">Review</h2>
           <div
-            className="prose dark:prose-invert max-w-none"
+            className="prose dark:prose-invert max-w-none indented-prose"
             dangerouslySetInnerHTML={{ __html: review.fullReview }}
           />
         </div>
