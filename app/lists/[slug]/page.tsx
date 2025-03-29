@@ -2,20 +2,14 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
 
 export const dynamicParams = true
 
-// @ts-expect-error GitHub Pages type inference bug workaround
-
-
-export default async function ListPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
+export default async function ListPage({ params }: { params: { slug: string } }) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
@@ -65,17 +59,11 @@ export default async function ListPage({
   )
 }
 
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  return movieLists.map((list) => ({
-    slug: list.slug,
-  }))
+export function generateStaticParams() {
+  return movieLists.map((list) => ({ slug: list.slug }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
