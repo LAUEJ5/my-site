@@ -33,7 +33,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 🔄 Recently Reviewed moved above Top Films */}
+      {/* Recently Reviewed moved above Top Films */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Recently Reviewed</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
