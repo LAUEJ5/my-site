@@ -7,11 +7,8 @@ import { reviews } from "@/lib/data"
 import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
-interface Props {
-  params: { slug: string }
-}
-
-export default function ReviewPage({ params }: Props) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ReviewPage({ params }: any) {
   const review = reviews.find((r) => r.slug === params.slug)
 
   if (!review) {
@@ -61,7 +58,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const review = reviews.find((r) => r.slug === params.slug)
   if (!review) {
     notFound()
@@ -71,4 +69,3 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Review of ${review.title}`,
   }
 }
-
