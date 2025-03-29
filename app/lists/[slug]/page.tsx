@@ -6,11 +6,7 @@ import { movieLists } from "@/lib/data"
 import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
-interface Props {
-  params: { slug: string }
-}
-
-export default function ListPage({ params }: Props) {
+export default function ListPage({ params }: { params: { slug: string } }) {
   const list = movieLists.find((l) => l.slug === params.slug)
 
   if (!list) {
@@ -69,7 +65,11 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) {
     notFound()
