@@ -9,7 +9,6 @@ import { movieLists } from "@/lib/data"
 export const dynamicParams = true
 
 // @ts-expect-error GitHub Pages type inference bug workaround
-type PageProps = never;
 
 
 export default async function ListPage({
