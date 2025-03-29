@@ -6,9 +6,6 @@ const nextConfig = {
     images: {
       unoptimized: true,
     },
-    experimental: {
-      typedRoutes: false // ← disables internal type constraints that are failing in your case
-    }
   };
   
   module.exports = nextConfig;
