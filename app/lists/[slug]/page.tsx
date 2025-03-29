@@ -6,7 +6,8 @@ import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
 import type { Metadata } from "next"
 
-// ✅ Accept any type for props to avoid GitHub Pages build issues
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function ListPage({ params }: any) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
@@ -18,7 +19,7 @@ export default function ListPage({ params }: any) {
         <p className="text-muted-foreground">{list.description}</p>
       </div>
 
-      {/* ✅ Grid view */}
+      {/* Grid view */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {list.movies.map((movie, idx) => {
           const imageSrc = getImagePath(movie.imageUrl ?? "") || getNotFoundImage()
@@ -58,14 +59,13 @@ export default function ListPage({ params }: any) {
   )
 }
 
-// ✅ For static generation
 export async function generateStaticParams() {
   return movieLists.map((list) => ({
     slug: list.slug,
   }))
 }
 
-// ✅ GitHub Pages–friendly params type
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
