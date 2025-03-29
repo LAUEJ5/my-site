@@ -306,8 +306,60 @@ export const movieLists: MovieList[] = [
         reviewSlug: ""
       }
     ],    
-    createdAt: "2024-03-01",
-    updatedAt: "2024-03-15",
+    createdAt: "2025-03-19",
+    updatedAt: "2025-03-19",
+  },
+  {
+    id: "2",
+    slug: "so-bad-theyre-good",
+    title: "So Bad They're Good",
+    description: "Always get me in a good mood.",
+    movies: [
+        {
+          title: "Batman and Robin",
+          year: 1997,
+          imageUrl: "/movies/batman_and_robin.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "The Room",
+          year: 2003,
+          imageUrl: "/movies/the_room.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "Master of Disguise",
+          year: 2003,
+          imageUrl: "/movies/master_of_disguise.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "Twilight",
+          year: 2008,
+          imageUrl: "/movies/twilight.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "Birdemic: Shock and Terror",
+          year: 2010,
+          imageUrl: "/movies/birdemic.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "VelociPastor",
+          year: 2018,
+          imageUrl: "/movies/velocipastor.jpg",
+          reviewSlug: ""
+        },
+        {
+          title: "CIApe",
+          year: 2021,
+          imageUrl: "/movies/ciape.jpg",
+          reviewSlug: ""
+        }     
+    ],    
+    createdAt: "2025-03-19",
+    updatedAt: "2025-03-19",
   },
 ]
 
