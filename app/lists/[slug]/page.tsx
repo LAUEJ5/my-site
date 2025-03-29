@@ -7,8 +7,7 @@ import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
 export const dynamicParams = true
-
-export default async function ListPage({ params }: any) {
+export default async function ListPage({ params }: { params: { slug: string } }) {
   const slug = params?.slug
   const list = movieLists.find((l) => l.slug === slug)
 
