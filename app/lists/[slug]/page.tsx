@@ -1,16 +1,23 @@
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import { notFound } from "next/navigation"
+
 import { Card, CardContent } from "@/components/ui/card"
-import { movieLists } from "@/lib/data"
-import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
+import { movieLists } from "@/lib/data"
+
+// Explicit generic type on the props
+type PageProps = {
+  params: {
+    slug: string
+  }
+}
 
 export const dynamicParams = true
-export default async function ListPage({ params }: { params: { slug: string } }) {
-  const slug = params?.slug
-  const list = movieLists.find((l) => l.slug === slug)
 
+export default async function ListPage({ params }: PageProps) {
+  const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
   return (
@@ -65,11 +72,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }))
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
