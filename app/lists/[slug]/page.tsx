@@ -6,17 +6,15 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
+import { List } from "postcss/lib/list"
 
-// Explicit generic type on the props
-type PageProps = {
-  params: {
-    slug: string
-  }
+type ListPageParams = {
+  params: { slug: string }
 }
 
 export const dynamicParams = true
 
-export default async function ListPage({ params }: PageProps) {
+export default async function ListPage({ params }: ListPageParams) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
@@ -72,7 +70,8 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }))
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+
+export async function generateMetadata({ params }: ListPageParams): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
