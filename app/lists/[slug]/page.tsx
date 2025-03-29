@@ -1,15 +1,13 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-
+import { notFound } from "next/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
+import type { Metadata } from "next"
 
-export const dynamicParams = true
-
-export default async function ListPage({ params }: { params: { slug: string } }) {
+// ✅ Accept any type for props to avoid GitHub Pages build issues
+export default function ListPage({ params }: any) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
@@ -20,30 +18,31 @@ export default async function ListPage({ params }: { params: { slug: string } })
         <p className="text-muted-foreground">{list.description}</p>
       </div>
 
+      {/* ✅ Grid view */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {list.movies.map((film, idx) => {
-          const imageSrc = getImagePath(film.imageUrl ?? "") || getNotFoundImage()
+        {list.movies.map((movie, idx) => {
+          const imageSrc = getImagePath(movie.imageUrl ?? "") || getNotFoundImage()
 
           const card = (
             <Card className="overflow-hidden flex flex-col items-center text-center p-4 h-full">
               <Image
                 src={imageSrc}
-                alt={`${film.title} poster`}
+                alt={`${movie.title} poster`}
                 width={160}
                 height={240}
                 className="rounded-md object-cover mb-4"
               />
               <CardContent className="p-0">
-                <h2 className="text-base font-medium">{film.title}</h2>
-                <p className="text-sm text-muted-foreground">{film.year}</p>
+                <h2 className="text-base font-medium">{movie.title}</h2>
+                <p className="text-sm text-muted-foreground">{movie.year}</p>
               </CardContent>
             </Card>
           )
 
-          return film.reviewSlug ? (
+          return movie.reviewSlug ? (
             <Link
               key={idx}
-              href={`/reviews/${film.reviewSlug}`}
+              href={`/reviews/${movie.reviewSlug}`}
               className="block hover:opacity-90 transition h-full"
             >
               {card}
@@ -59,11 +58,15 @@ export default async function ListPage({ params }: { params: { slug: string } })
   )
 }
 
-export function generateStaticParams() {
-  return movieLists.map((list) => ({ slug: list.slug }))
+// ✅ For static generation
+export async function generateStaticParams() {
+  return movieLists.map((list) => ({
+    slug: list.slug,
+  }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+// ✅ GitHub Pages–friendly params type
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
