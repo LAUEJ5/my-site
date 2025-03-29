@@ -6,7 +6,6 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
-import { List } from "postcss/lib/list"
 
 type ListPageParams = {
   params: { slug: string }
