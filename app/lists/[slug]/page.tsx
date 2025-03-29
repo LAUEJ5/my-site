@@ -7,13 +7,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
 
-type ListPageParams = {
-  params: { slug: string }
-}
-
 export const dynamicParams = true
 
-export default async function ListPage({ params }: ListPageParams) {
+export default async function ListPage({ params }: { params: { slug: string } }) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
@@ -69,8 +65,11 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }))
 }
 
-
-export async function generateMetadata({ params }: ListPageParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
