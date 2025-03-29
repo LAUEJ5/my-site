@@ -8,12 +8,11 @@ import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
 export const dynamicParams = true
 
-export default async function ListPage({ params }: { params: { slug: string } }) {
-  const list = movieLists.find((l) => l.slug === params.slug)
+export default async function ListPage({ params }: any) {
+  const slug = params?.slug
+  const list = movieLists.find((l) => l.slug === slug)
 
-  if (!list) {
-    notFound()
-  }
+  if (!list) notFound()
 
   return (
     <div className="space-y-8">
@@ -61,7 +60,7 @@ export default async function ListPage({ params }: { params: { slug: string } })
   )
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return movieLists.map((list) => ({
     slug: list.slug,
   }))
@@ -73,9 +72,8 @@ export async function generateMetadata({
   params: { slug: string }
 }): Promise<Metadata> {
   const list = movieLists.find((l) => l.slug === params.slug)
-  if (!list) {
-    notFound()
-  }
+  if (!list) notFound()
+
   return {
     title: list.title,
     description: list.description,
