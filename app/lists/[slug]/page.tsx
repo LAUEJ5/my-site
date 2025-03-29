@@ -2,14 +2,17 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-
 import { Card, CardContent } from "@/components/ui/card"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 import { movieLists } from "@/lib/data"
 
 export const dynamicParams = true
 
-export default async function ListPage({ params }: { params: { slug: string } }) {
+export default async function ListPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
   const list = movieLists.find((l) => l.slug === params.slug)
   if (!list) notFound()
 
