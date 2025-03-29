@@ -1,10 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import Rating from "@/components/rating"
-import { movieLists, getReviewById } from "@/lib/data"
+import { movieLists } from "@/lib/data"
 import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
@@ -26,46 +24,38 @@ export default function ListPage({ params }: Props) {
         <p className="text-muted-foreground">{list.description}</p>
       </div>
 
-      <div className="grid gap-6">
-        {list.movies.map(({ reviewId, notes }) => {
-          const review = getReviewById(reviewId)
-          if (!review) return null
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {list.movies.map((film, idx) => {
+          const imageSrc = getImagePath(film.imageUrl ?? "") || getNotFoundImage()
 
-          return (
-            <Card key={review.id} className="overflow-hidden">
-              <CardContent className="p-6">
-                <div className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <Image
-                      src={getImagePath(review.imageUrl) || getNotFoundImage()}
-                      alt={`${review.title} poster`}
-                      width={100}
-                      height={150}
-                      className="rounded-md object-cover"
-                    />
-                  </div>
-                  <div className="flex-grow space-y-2">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <Link href={`/reviews/${review.slug}`} className="text-xl font-semibold hover:underline">
-                          {review.title}
-                        </Link>
-                        <p className="text-muted-foreground">{review.year}</p>
-                      </div>
-                      <Rating rating={review.rating} />
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                      {review.genres.map((genre) => (
-                        <Badge key={genre} variant="secondary">
-                          {genre}
-                        </Badge>
-                      ))}
-                    </div>
-                    {notes && <p className="text-muted-foreground italic">{notes}</p>}
-                  </div>
-                </div>
+          const card = (
+            <Card className="overflow-hidden flex flex-col items-center text-center p-4 h-full">
+              <Image
+                src={imageSrc}
+                alt={`${film.title} poster`}
+                width={160}
+                height={240}
+                className="rounded-md object-cover mb-4"
+              />
+              <CardContent className="p-0">
+                <h2 className="text-base font-medium">{film.title}</h2>
+                <p className="text-sm text-muted-foreground">{film.year}</p>
               </CardContent>
             </Card>
+          )
+
+          return film.reviewSlug ? (
+            <Link
+              key={idx}
+              href={`/reviews/${film.reviewSlug}`}
+              className="block hover:opacity-90 transition h-full"
+            >
+              {card}
+            </Link>
+          ) : (
+            <div key={idx} className="h-full">
+              {card}
+            </div>
           )
         })}
       </div>
@@ -89,4 +79,3 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: list.description,
   }
 }
-

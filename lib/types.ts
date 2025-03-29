@@ -17,8 +17,10 @@ export interface MovieList {
   title: string
   description: string
   movies: {
-    reviewId: string
-    notes?: string
+    title: string
+    year: number
+    imageUrl?: string
+    reviewSlug: string | null
   }[]
   createdAt: string
   updatedAt: string

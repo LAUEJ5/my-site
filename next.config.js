@@ -2,9 +2,8 @@
 const nextConfig = {
     output: "export",
     basePath: "/jeremys-film-reviews",
+    assetPrefix: '/jeremys-film-reviews',
     images: {
         unoptimized: true,
     }
 };
-
-export default nextConfig;
