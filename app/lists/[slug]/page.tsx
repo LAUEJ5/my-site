@@ -8,6 +8,10 @@ import { movieLists } from "@/lib/data"
 
 export const dynamicParams = true
 
+// @ts-ignore
+type PageProps = never;
+
+
 export default async function ListPage({
   params,
 }: {
