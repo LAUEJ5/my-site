@@ -155,11 +155,24 @@ export const movieLists: MovieList[] = [
     title: "Mind-Bending Sci-Fi",
     description: "Films that will make you question reality.",
     movies: [
-      { reviewId: "1", notes: "A classic of the genre." },
-      { reviewId: "2", notes: "Chilling and thought-provoking." },
-      { reviewId: "3", notes: "Visually stunning and action-packed." },
-      { reviewId: "4", notes: "A wild ride through the multiverse." },
-      { reviewId: "5", notes: "Everything you could ever want in a movie." },
+      {
+        title: "The Grand Budapest Hotel",
+        year: 2014,
+        imageUrl: "/movies/the_grand_budapest_hotel.jpg",
+        reviewSlug: "the-grand-budapest-hotel"
+      },
+      {
+        title: "The Matrix",
+        year: 1999,
+        imageUrl: "",
+        reviewSlug: ""
+      },
+      {
+        title: "Donnie Darko",
+        year: 2001,
+        imageUrl: "",
+        reviewSlug: ""
+      }
     ],
     createdAt: "2024-03-01",
     updatedAt: "2024-03-15",

@@ -33,6 +33,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 🔄 Recently Reviewed moved above Top Films */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Recently Reviewed</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {recentReviews.map((review) => (
+            <Link
+              key={review.id}
+              href={`/reviews/${review.slug}`}
+              className="space-y-2 block hover:opacity-75 transition-opacity"
+            >
+              <Image
+                src={getImagePath(review.imageUrl) || getNotFoundImage()}
+                alt={`${review.title} poster`}
+                width={300}
+                height={450}
+                className="rounded-lg shadow-md w-full"
+              />
+              <h3 className="text-lg font-semibold">{review.title}</h3>
+              <p className="text-sm text-muted-foreground">
+                Reviewed on: {format(new Date(review.reviewDate), "MMM d, yyyy")}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section>
         <h2 className="text-2xl font-semibold mb-4">My Top Five Films</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -56,29 +82,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Recently Reviewed</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {recentReviews.map((review) => (
-            <Link
-              key={review.id}
-              href={`/reviews/${review.slug}`}
-              className="space-y-2 block hover:opacity-75 transition-opacity"
-            >
-              <Image
-                src={getImagePath(review.imageUrl) || getNotFoundImage()}
-                alt={`${review.title} poster`}
-                width={300}
-                height={450}
-                className="rounded-lg shadow-md w-full"
-              />
-              <h3 className="text-lg font-semibold">{review.title}</h3>
-              <p className="text-sm text-muted-foreground">Reviewed on: {format(new Date(review.reviewDate), "MMM d, yyyy")}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       <div className="mt-6 flex gap-4">
         <Button asChild>
           <Link href="/reviews">View All Reviews</Link>
@@ -90,4 +93,3 @@ export default function Home() {
     </div>
   )
 }
-

@@ -26,11 +26,13 @@ export default function Reviews() {
 
   const filteredReviews = useMemo(() => {
     return reviews.filter((review) => {
-      const matchesSearch = review.title.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesGenre = selectedGenres.length === 0 || review.genres.some((genre) => selectedGenres.includes(genre))
-      return matchesSearch && matchesGenre
-    })
+        const matchesSearch = review.title.toLowerCase().includes(searchTerm.toLowerCase())
+        const matchesGenre = selectedGenres.length === 0 || review.genres.some((genre) => selectedGenres.includes(genre))
+        return matchesSearch && matchesGenre
+      })
+      .sort((a, b) => new Date(b.reviewDate).getTime() - new Date(a.reviewDate).getTime()) // sort newest first
   }, [searchTerm, selectedGenres])
+  
 
   const totalPages = Math.ceil(filteredReviews.length / ITEMS_PER_PAGE[viewMode])
   const paginatedReviews = useMemo(() => {
@@ -40,22 +42,22 @@ export default function Reviews() {
 
   const toggleGenre = (genre: string) => {
     setSelectedGenres((prev) => (prev.includes(genre) ? prev.filter((g) => g !== genre) : [...prev, genre]))
-    setCurrentPage(1) // Reset to first page when changing filters
+    setCurrentPage(1) 
   }
 
   const clearGenres = () => {
     setSelectedGenres([])
-    setCurrentPage(1) // Reset to first page when clearing filters
+    setCurrentPage(1)
   }
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page)
-    window.scrollTo(0, 0) // Scroll to top when changing pages
+    window.scrollTo(0, 0) 
   }
 
   const handleViewModeChange = (newMode: ViewMode) => {
     setViewMode(newMode)
-    setCurrentPage(1) // Reset to first page when changing view mode
+    setCurrentPage(1) 
   }
 
   return (
@@ -96,7 +98,7 @@ export default function Reviews() {
         value={searchTerm}
         onChange={(e) => {
           setSearchTerm(e.target.value)
-          setCurrentPage(1) // Reset to first page when searching
+          setCurrentPage(1) 
         }}
       />
 

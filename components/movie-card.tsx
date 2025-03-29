@@ -34,7 +34,7 @@ export default function MovieCard({ review }: { review: Review }) {
             )}
           </div>
           <Rating rating={review.rating} />
-          <p className="text-xs text-muted-foreground">Reviewed: {format(new Date(review.reviewDate), "MMM d,s yyyy")}</p>
+          <p className="text-xs text-muted-foreground">Reviewed: {format(new Date(review.reviewDate), "MMM d, yyyy")}</p>
         </div>
       </div>
     </Link>
