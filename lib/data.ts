@@ -151,10 +151,118 @@ export const getTopFilms = (): Review[] => {
 export const movieLists: MovieList[] = [
   {
     id: "1",
-    slug: "mind-bending-sci-fi",
-    title: "Mind-Bending Sci-Fi",
-    description: "Films that will make you question reality.",
+    slug: "jeremys-top-25",
+    title: "Jeremy's Top 25",
+    description: "Running list of my top 25 films in no particular order.",
     movies: [
+      {
+        title: "Dazed and Confused",
+        year: 1993,
+        imageUrl: "/movies/dazed_and_confused.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Jurassic Park",
+        year: 1993,
+        imageUrl: "/movies/jurassic_park.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Before Sunrise",
+        year: 1995,
+        imageUrl: "/movies/before_sunrise.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Se7en",
+        year: 1995,
+        imageUrl: "/movies/se7en.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Princess Mononoke",
+        year: 1997,
+        imageUrl: "/movies/princess_mononoke.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "The Iron Giant",
+        year: 1999,
+        imageUrl: "/movies/the_iron_giant.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Memento",
+        year: 2000,
+        imageUrl: "/movies/memento.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "The Fellowship of the Ring",
+        year: 2001,
+        imageUrl: "/movies/fellowship.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "City of God",
+        year: 2002,
+        imageUrl: "/movies/city_of_god.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Punch-Drunk Love",
+        year: 2002,
+        imageUrl: "/movies/punch_drunk_love.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Eternal Sunshine of the Spotless Mind",
+        year: 2004,
+        imageUrl: "/movies/eternal_sunshine.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Into the Wild",
+        year: 2007,
+        imageUrl: "/movies/into_the_wild.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Inglourious Basterds",
+        year: 2009,
+        imageUrl: "/movies/inglourious_basterds.jpg",
+        reviewSlug: "inglourious-basterds"
+      },
+      {
+        title: "The Social Network",
+        year: 2010,
+        imageUrl: "/movies/the_social_network.jpg",
+        reviewSlug: "the-social-network"
+      },
+      {
+        title: "The Master",
+        year: 2012,
+        imageUrl: "/movies/the_master.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Prisoners",
+        year: 2013,
+        imageUrl: "/movies/prisoners.jpg",
+        reviewSlug: "prisoners"
+      },
+      {
+        title: "Whiplash",
+        year: 2014,
+        imageUrl: "/movies/whiplash.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Boyhood",
+        year: 2014,
+        imageUrl: "/movies/boyhood.jpg",
+        reviewSlug: "boyhood"
+      },
       {
         title: "The Grand Budapest Hotel",
         year: 2014,
@@ -162,18 +270,42 @@ export const movieLists: MovieList[] = [
         reviewSlug: "the-grand-budapest-hotel"
       },
       {
-        title: "The Matrix",
-        year: 1999,
-        imageUrl: "",
+        title: "Steve Jobs",
+        year: 2015,
+        imageUrl: "/movies/steve_jobs.jpg",
         reviewSlug: ""
       },
       {
-        title: "Donnie Darko",
-        year: 2001,
-        imageUrl: "",
+        title: "Parasite",
+        year: 2019,
+        imageUrl: "/movies/parasite.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "The Batman",
+        year: 2022,
+        imageUrl: "/movies/the_batman.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Everything Everywhere All At Once",
+        year: 2022,
+        imageUrl: "/movies/everything_everywhere.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "RRR",
+        year: 2022,
+        imageUrl: "/movies/rrr.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Dune: Part Two",
+        year: 2024,
+        imageUrl: "/movies/dune_part_2.jpg",
         reviewSlug: ""
       }
-    ],
+    ],    
     createdAt: "2024-03-01",
     updatedAt: "2024-03-15",
   },
