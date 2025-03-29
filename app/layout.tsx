@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     template: "%s | Jeremy's Film Reviews",
   },
   description: "A showcase of Jeremy's film reviews and top picks",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
 }
 
 export default function RootLayout({
@@ -33,4 +36,3 @@ export default function RootLayout({
     </html>
   )
 }
-
