@@ -8,7 +8,7 @@ import { movieLists } from "@/lib/data"
 
 export const dynamicParams = true
 
-// @ts-ignore
+// @ts-expect-error GitHub Pages type inference bug workaround
 type PageProps = never;
 
 
