@@ -306,8 +306,8 @@ export const movieLists: MovieList[] = [
         reviewSlug: ""
       }
     ],    
-    createdAt: "2025-03-19",
-    updatedAt: "2025-03-19",
+    createdAt: "2025-03-29",
+    updatedAt: "2025-03-29",
   },
   {
     id: "2",
@@ -358,9 +358,37 @@ export const movieLists: MovieList[] = [
           reviewSlug: ""
         }     
     ],    
-    createdAt: "2025-03-19",
-    updatedAt: "2025-03-19",
+    createdAt: "2025-03-29",
+    updatedAt: "2025-03-29",
   },
+  {
+    id: "3",
+    slug: "2025-films",
+    title: "My 2025 Films",
+    description: "Keeping track of the new releases.",
+    movies: [
+      {
+        title: "One of Them Days",
+        year: 2025,
+        imageUrl: "/movies/one_of_them_days.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Heart Eyes",
+        year: 2025,
+        imageUrl: "/movies/heart_eyes.jpg",
+        reviewSlug: ""
+      },
+      {
+        title: "Mickey 17",
+        year: 2025,
+        imageUrl: "/movies/mickey_17.jpg",
+        reviewSlug: "mickey-17"
+      }
+    ],
+    createdAt: "2025-03-30",
+    updatedAt: "2025-03-30"
+  }  
 ]
 
 export const getReviewById = (id: string): Review | undefined => {
