@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/jeremys-film-reviews",
+  basePath: process.env.NODE_ENV === "production" ? "/my-site" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/my-site/" : "",
   images: {
       unoptimized: true,
   }
