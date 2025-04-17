@@ -4,11 +4,11 @@ import { ModeToggle } from "./mode-toggle"
 export default function Navbar() {
   return (
     <nav className="bg-background border-b">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-5xl">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold hidden md:block">
-              Jeremy&apos;s Film Reviews
+              jeremylaue.com
             </Link>
             <Link href="/" className="text-2xl font-bold md:hidden">
               JFR

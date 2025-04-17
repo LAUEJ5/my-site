@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeremy's Film Reviews",
+    default: "Jeremy Laue",
     template: "%s | Jeremy's Film Reviews",
   },
-  description: "A showcase of Jeremy's film reviews and top picks",
+  description: "Jeremy's personal website",
   icons: {
     icon: "/images/favicon.ico",
   },
