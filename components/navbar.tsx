@@ -19,10 +19,10 @@ export default function Navbar() {
               Home
             </Link>
             <Link href="/reviews" className="text-foreground hover:text-primary">
-              Reviews
+              Film Reviews
             </Link>
-            <Link href="/lists" className="text-foreground hover:text-primary">
-              Lists
+            <Link href="/fun-stuff" className="text-foreground hover:text-primary">
+              Fun Stuff
             </Link>
             <ModeToggle />
           </div>
