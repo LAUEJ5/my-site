@@ -2,16 +2,11 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { format } from "date-fns"
-import { Button } from "@/components/ui/button"
-import { getRecentReviews, getTopFilms } from "@/lib/data"
+import { Linkedin, Github, Film } from "lucide-react"
+import { getTopFilms } from "@/lib/data"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChevronDown, Linkedin, Github, Film } from "lucide-react"
-import { useState } from "react"
 
 export default function Home() {
-  const [isAboutOpen, setIsAboutOpen] = useState(false)
   const topFilms = getTopFilms().slice(0, 5)
 
   return (
