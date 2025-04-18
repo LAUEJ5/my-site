@@ -70,7 +70,7 @@ export default function Home() {
                 <Link href="https://www.harvard.edu/" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 hover:opacity-75 transition-opacity">
                   <div className="relative w-6 h-6 mt-1">
                     <Image
-                      src="/images/icons/harvard_icon.jpeg"
+                      src="/images/icons/harvard.png"
                       alt="Harvard icon"
                       width={24}
                       height={24}

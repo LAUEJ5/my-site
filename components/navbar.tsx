@@ -11,7 +11,7 @@ export default function Navbar() {
               jeremylaue.com
             </Link>
             <Link href="/" className="text-2xl font-bold md:hidden">
-              JFR
+              JL
             </Link>
           </div>
           <div className="flex items-center space-x-4">
