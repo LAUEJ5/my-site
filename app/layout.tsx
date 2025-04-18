@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: "Jeremy's personal website",
   icons: {
-    icon: "/images/favicon.ico",
+    icon: "/images/icons/cup_icon.svg",
   },
 }
 
