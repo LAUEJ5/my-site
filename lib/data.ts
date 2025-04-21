@@ -188,26 +188,124 @@ export type FunStuffItem = {
   title: string
   date: string
   imageUrl: string
+  imageUrl2?: string  // Optional second image for dual-photo cards
+  type: "image" | "video" | "dual-photo"
+  link?: string
+  objectPosition?: string
+  objectPosition2?: string  // Optional object position for second image in dual-photo cards
 }
 
 export const funStuffItems: FunStuffItem[] = [
   {
     id: "1",
-    title: "My Top 25 Films",
-    date: "March 29, 2025",
-    imageUrl: "/fun-stuff/top-25.jpg"
+    title: "My niece was born",
+    date: "May 20, 2019",
+    imageUrl: "/images/fun-stuff/niece-born.jpeg",
+    objectPosition: "15% center",
+    type: "image"
   },
   {
     id: "2",
-    title: "So Bad They're Good",
-    date: "March 29, 2025",
-    imageUrl: "/fun-stuff/so-bad.jpg"
+    title: "I learned to drive",
+    date: "February 19, 2020",
+    imageUrl: "/images/fun-stuff/learned-to-drive.jpeg",
+    objectPosition: "left center",
+    type: "image"
   },
   {
     id: "3",
-    title: "2025 Films",
-    date: "March 30, 2025",
-    imageUrl: "/fun-stuff/2025.jpg"
+    title: "I was in a music video",
+    date: "December 6, 2018",
+    imageUrl: "/images/fun-stuff/music-video.jpeg",
+    objectPosition: "center top",
+    link: "https://www.youtube.com/watch?v=R9Qzj7rzCIg&ab_channel=BlackillacMusic",
+    type: "image"
+  },
+  {
+    id: "4",
+    title: "I backpacked in Maine",
+    date: "August 18, 2022",
+    imageUrl: "/images/fun-stuff/backpack.jpeg",
+    objectPosition: "center top",
+    type: "image"
+  },
+  {
+    id: "5",
+    title: "I completed the Hot Ones Challenge with my brothers",
+    date: "August 13, 2022",
+    imageUrl: "/images/fun-stuff/hot-ones.jpeg",
+    objectPosition: "center center",
+    type: "image"
+  },
+  {
+    id: "6",
+    title: "I skydived with my parents",
+    date: "July 4, 2024",
+    imageUrl: "/images/fun-stuff/skydive.jpeg",
+    objectPosition: "center center",
+    type: "image"
+  },
+  {
+    id: "7",
+    title: "I started a nonprofit",
+    date: "March 10, 2021",
+    imageUrl: "/images/fun-stuff/nonprofit.jpeg",
+    objectPosition: "center top",
+    type: "image"
+  },
+  {
+    id: "8",
+    title: "I ran a marathon",
+    date: "February 16, 2025",
+    imageUrl: "/images/fun-stuff/marathon.jpeg",
+    objectPosition: "right 25%",
+    type: "image"
+  },
+  {
+    id: "9",
+    title: "I put on my own puppet show",
+    date: "January 22, 2012",
+    imageUrl: "/images/fun-stuff/puppet.jpeg",
+    objectPosition: "right 25%",
+    type: "image"
+  },
+  {
+    id: "10",
+    title: "I paid attention in physics class",
+    date: "October 6, 2020",
+    imageUrl: "/videos/fun-stuff/physics.mp4",
+    type: "video"
+  },
+  {
+    id: "11",
+    title: "I learned to juggle",
+    date: "July 21, 2021",
+    imageUrl: "/videos/fun-stuff/juggle.mov",
+    type: "video"
+  },  
+  {
+    id: "12",
+    title: "I discovered I was bad at art",
+    date: "October 10, 2021",
+    imageUrl: "/images/fun-stuff/art.jpeg",
+    objectPosition: "right 25%",
+    type: "image"
+  },
+  {
+    id: "13",
+    title: "I dyed my hair purple",
+    date: "February 15, 2022",
+    imageUrl: "/images/fun-stuff/purple1.jpeg",
+    imageUrl2: "/images/fun-stuff/purple2.jpeg",
+    type: "dual-photo",
+    objectPosition: "75% 65%",
+    objectPosition2: "center 30%"
   }
 ]
+
+export const getFunStuffItems = (): FunStuffItem[] => {
+  return [...funStuffItems].sort((a, b) => 
+    new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+}
 
