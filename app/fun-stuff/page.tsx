@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { funStuffItems, getFunStuffItems } from "@/lib/data"
+import { getFunStuffItems } from "@/lib/data"
 import Link from "next/link"
 
 export default function FunStuffPage() {
