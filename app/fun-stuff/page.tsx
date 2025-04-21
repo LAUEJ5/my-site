@@ -18,7 +18,7 @@ export default function FunStuffPage() {
                     idx % 2 === 0 ? "" : "md:flex-row-reverse"
                   } gap-6 items-center`}
                 >
-                  <div className={`md:w-1/2 ${item.type === "video" ? "h-[400px]" : ""}`}>
+                  <div className={`w-full md:w-1/2 ${item.type === "video" ? "h-[400px]" : ""}`}>
                     {item.type === "video" ? (
                       <div className="w-full h-full relative">
                         <video
@@ -32,22 +32,22 @@ export default function FunStuffPage() {
                         />
                       </div>
                     ) : item.type === "dual-photo" ? (
-                      <div className="w-full h-full relative flex">
-                        <div className="w-1/2 relative" style={{ aspectRatio: '3/4' }}>
+                      <div className="w-full h-full relative flex flex-col md:flex-row">
+                        <div className="w-full md:w-1/2 relative" style={{ aspectRatio: '3/4' }}>
                           <Image
                             src={item.imageUrl}
                             alt={`${item.title} - First image`}
                             fill
-                            className="rounded-l-lg object-cover"
+                            className="rounded-t-lg md:rounded-l-lg md:rounded-tr-none object-cover"
                             style={{ objectPosition: item.objectPosition || "center center" }}
                           />
                         </div>
-                        <div className="w-1/2 relative" style={{ aspectRatio: '3/4' }}>
+                        <div className="w-full md:w-1/2 relative" style={{ aspectRatio: '3/4' }}>
                           <Image
                             src={item.imageUrl2!}
                             alt={`${item.title} - Second image`}
                             fill
-                            className="rounded-r-lg object-cover"
+                            className="rounded-b-lg md:rounded-r-lg md:rounded-bl-none object-cover"
                             style={{ objectPosition: item.objectPosition2 || "center center" }}
                           />
                         </div>

@@ -300,6 +300,14 @@ export const funStuffItems: FunStuffItem[] = [
     type: "dual-photo",
     objectPosition: "75% 65%",
     objectPosition2: "center 30%"
+  },
+  {
+    id: "14",
+    title: "I was a wet floor sign for Halloween",
+    date: "October 31, 2022",
+    imageUrl: "/images/fun-stuff/wet-floor.jpeg",
+    objectPosition: "center center",
+    type: "image"
   }
 ]
 
