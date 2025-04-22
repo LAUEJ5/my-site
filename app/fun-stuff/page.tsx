@@ -1,9 +1,27 @@
+"use client"
+
+import { useState, useMemo } from "react"
 import Image from "next/image"
 import { getFunStuffItems } from "@/lib/data"
 import Link from "next/link"
+import { Pagination } from "@/components/pagination"
+
+const ITEMS_PER_PAGE = 10
 
 export default function FunStuffPage() {
-  const items = getFunStuffItems()
+  const [currentPage, setCurrentPage] = useState(1)
+  const allItems = getFunStuffItems()
+  
+  const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE)
+  const paginatedItems = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+    return allItems.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+  }, [allItems, currentPage])
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    window.scrollTo(0, 0)
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center pt-4">
@@ -11,7 +29,7 @@ export default function FunStuffPage() {
         <div className="space-y-8">
           <h1 className="text-3xl font-bold">Fun Stuff</h1>
           <div className="space-y-8">
-            {items.map((item, idx) => {
+            {paginatedItems.map((item, idx) => {
               const CardContent = () => (
                 <div
                   className={`flex flex-col md:flex-row ${
@@ -88,6 +106,9 @@ export default function FunStuffPage() {
               )
             })}
           </div>
+          {totalPages > 1 && (
+            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+          )}
         </div>
       </div>
     </div>

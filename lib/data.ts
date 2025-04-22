@@ -308,7 +308,65 @@ export const funStuffItems: FunStuffItem[] = [
     imageUrl: "/images/fun-stuff/wet-floor.jpeg",
     objectPosition: "center center",
     type: "image"
-  }
+  },
+  {
+    id: "15",
+    title: "I skied a black diamond",
+    date: "January 6, 2024",
+    imageUrl: "/images/fun-stuff/black-diamond.jpeg",
+    objectPosition: "center 100%",
+    type: "image"
+  },
+  {
+    id: "16",
+    title: "I roadtripped the East Coast",
+    date: "August 20, 2024",
+    imageUrl: "/images/fun-stuff/map.jpg",
+    imageUrl2: "/images/fun-stuff/roadtrip.jpeg",
+    type: "dual-photo",
+    objectPosition: "75% 65%",
+    objectPosition2: "center 30%"
+  },
+  {
+    id: "17",
+    title: "I worked as a bartender",
+    date: "July 7, 2023",
+    imageUrl: "/images/fun-stuff/bartend.jpg",
+    objectPosition: "center 45%",
+    type: "image"
+  },
+  {
+    id: "18",
+    title: "I polar plunged in Walden Pond",
+    date: "October 1, 2023",
+    imageUrl: "/videos/fun-stuff/walden.mov",
+    type: "video"
+  },
+  {
+    id: "19",
+    title: "I was a campus tour guide",
+    date: "September 4, 2022",
+    imageUrl: "/images/fun-stuff/tourguide.png",
+    objectPosition: "55% 45%",
+    type: "image"
+  },
+  {
+    id: "20",
+    title: "I built and painted a bench",
+    date: "June 14, 2024",
+    imageUrl: "/videos/fun-stuff/bench.mp4",
+    type: "video"
+  },
+  {
+    id: "21",
+    title: "I recited The Lorax at my graduation",
+    date: "May 27, 2022",
+    imageUrl: "/images/fun-stuff/gradspeech.png",
+    objectPosition: "center top",
+    link: "https://www.sanmarcosrecord.com/article/16908,this-is-only-the-beginning-san-marcos-high-school-celebrates-graduation",
+    type: "image"
+  },
+
 ]
 
 export const getFunStuffItems = (): FunStuffItem[] => {
