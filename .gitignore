@@ -32,9 +32,3 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large media files
-public/videos/fun-stuff/bench.mp4
-public/videos/fun-stuff/juggle.mov
-public/videos/fun-stuff/walden.mov
-public/videos/fun-stuff/rap-battle.mov
-public/images/fun-stuff/gradspeech.png
