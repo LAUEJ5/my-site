@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { uploadToBlob } from '@/lib/blob';
+import { put } from '@vercel/blob';
 
 export async function POST(request: Request) {
   try {
@@ -13,14 +13,31 @@ export async function POST(request: Request) {
       );
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
-    const url = await uploadToBlob(buffer, file.name);
+    // Check file size (optional, but good practice)
+    const maxSize = 10 * 1024 * 1024; // 10MB
+    if (file.size > maxSize) {
+      return NextResponse.json(
+        { error: 'File size exceeds 10MB limit' },
+        { status: 413 }
+      );
+    }
 
-    return NextResponse.json({ url });
+    console.log('Processing file:', file.name, 'Size:', file.size);
+    
+    // Create a buffer from the file
+    const buffer = Buffer.from(await file.arrayBuffer());
+    
+    // Upload to Vercel Blob
+    const blob = await put(file.name, buffer, {
+      access: 'public',
+    });
+
+    console.log('Upload successful, URL:', blob.url);
+    return NextResponse.json({ url: blob.url });
   } catch (error) {
     console.error('Upload error:', error);
     return NextResponse.json(
-      { error: 'Failed to upload file' },
+      { error: error instanceof Error ? error.message : 'Failed to upload file' },
       { status: 500 }
     );
   }
