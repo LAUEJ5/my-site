@@ -379,6 +379,42 @@ export const funStuffItems: FunStuffItem[] = [
     link: "https://www.sanmarcosrecord.com/article/16908,this-is-only-the-beginning-san-marcos-high-school-celebrates-graduation",
     type: "image"
   },
+  {
+    id: "22",
+    title: "I sliced Halloween pumpkins with my family",
+    date: "October 31, 2021",
+    imageUrl: "/videos/fun-stuff/pumpkin.mov",
+    type: "video"
+  },  
+  {
+    id: "23",
+    title: "I celebrated Olivia Rodrigo's hit song 'Vampire' by dressing as one for her concert",
+    date: "April 6, 2024",
+    imageUrl: "/images/fun-stuff/vampire.jpeg",
+    type: "image"
+  },
+  {
+    id: "24",
+    title: "I killed my kindergarten dance performance (I'm on the far right)",
+    date: "May 15, 2010",
+    imageUrl: "/videos/fun-stuff/dance.mov",
+    type: "video"
+  },  
+  {
+    id: "25",
+    title: "I took up videography",
+    date: "August 24, 2020",
+    imageUrl: "/images/fun-stuff/videography.jpeg",
+    objectPosition: "center 35%",
+    type: "image"
+  },  
+  {
+    id: "26",
+    title: "I lead my tennis team chants",
+    date: "August 20, 2021",
+    imageUrl: "/videos/fun-stuff/tennis.mov",
+    type: "video"
+  }, 
 
 ]
 
