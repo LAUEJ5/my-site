@@ -415,6 +415,14 @@ export const funStuffItems: FunStuffItem[] = [
     imageUrl: "/videos/fun-stuff/tennis.mov",
     type: "video"
   }, 
+  {
+    id: "27",
+    title: "I biked the Circuit of the Americas with my brothers",
+    date: "May 30, 2023",
+    imageUrl: "/images/fun-stuff/cota.jpeg",
+    objectPosition: "center 48%",
+    type: "image"
+  }, 
 
 ]
 
