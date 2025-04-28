@@ -6,9 +6,11 @@ import Link from "next/link"
 import { Linkedin, Github, Film } from "lucide-react"
 import { getTopFilms } from "@/lib/data"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
+import { getRecentReviews } from "@/lib/data"
 
 export default function Home() {
   const topFilms = getTopFilms().slice(0, 5)
+  const recentReviews = getRecentReviews(5)
 
   return (
     <div className="min-h-screen flex flex-col items-center pt-4">
@@ -150,6 +152,30 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Recently Reviewed Section */}
+        <section className="w-full mb-16">
+          <h2 className="text-2xl font-semibold mb-4 text-center">Recently Reviewed</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {recentReviews.map((film) => (
+              <Link
+                key={film.id}
+                href={`/reviews/${film.slug}`}
+                className="space-y-2 block hover:opacity-75 transition-opacity"
+              >
+                <Image
+                  src={getImagePath(film.imageUrl) || getNotFoundImage()}
+                  alt={`${film.title} poster`}
+                  width={300}
+                  height={450}
+                  className="rounded-lg shadow-md w-full"
+                />
+                <h3 className="text-sm font-semibold text-center">{film.title}</h3>
+                <p className="text-xs text-muted-foreground text-center">{film.year}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         {/* Top Five Films Section (third on mobile) */}
         <section className="w-full order-3">
