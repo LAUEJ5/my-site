@@ -7,8 +7,9 @@ import { reviews } from "@/lib/data"
 import type { Metadata } from "next"
 import { getImagePath, getNotFoundImage } from "@/lib/utils"
 
-export default async function ReviewPage({ params }: { params: { slug: string } }) {
-  const review = reviews.find((r) => r.slug === params.slug)
+export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params
+  const review = reviews.find((r) => r.slug === resolvedParams.slug)
 
   if (!review) {
     notFound()
@@ -57,8 +58,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const review = reviews.find((r) => r.slug === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params
+  const review = reviews.find((r) => r.slug === resolvedParams.slug)
   if (!review) {
     notFound()
   }
