@@ -34,7 +34,7 @@ export const reviews: Review[] = [
     imageUrl: "/movies/boyhood.jpg?height=450&width=300",
     rating: 5,
     reviewDate: "2024-03-30",
-    fullReview: "tob e inserted",
+    fullReview: "to be inserted",
     isTopFilm: true,
   },
   {
@@ -156,7 +156,20 @@ export const reviews: Review[] = [
     reviewDate: "2025-04-22",
     fullReview: "<p>Okay here we go. This one was pretty divisive to say the least. On the one hand, the virality of the film and its mainstream appeal skyrocketed the box office numbers, making it hard to argue against the fact that this movie was quite popular. On the other hand, there are plenty of voices out there labeling this the “brain-rot” of modern film and expressing frustration over the obnoxious audience participation in cinemas. But I know y’all are here for my opinion, so here it is.</p>\n\n<p>All in all, I had a very good time. The amount of fun that Jack Black and Jason Momoa are clearly having on screen translated very well for me. Absolutely the film was a goofy mess with some frankly off-putting blends of reality and CGI, but I cannot deny that its stupidity was part of its charm. Jack Black simultaneously doesn’t take anything seriously and gives this role his all—a dedication I salute. I can tell from watching this film (and really any video of him that exists on the internet) that Jack Black would be a very fun person to know in real life.</p>\n\n<p>A big part of me was tempted to hate the film going into it. After all, <em>A Minecraft Movie</em> has all the ingredients necessary to piss off pretentious film bros—it’s a goofy blockbuster about an existing IP using corny jokes and big names to draw in audiences. But despite my expectations, the film was surprisingly self-aware. Leaning into the silliness made for an absolutely absurd, but in many ways charming, experience.</p>\n\n<p>That being said, I can’t claim the film is any masterpiece. I won’t really remember—and indeed have already forgotten—all of the side characters beyond our two main actors. And even with the consistent swinging for the fences of many of the film’s jokes, there were plenty of moments that fell very flat for me. But at the end of the day, I have to remember that I’m not the target audience, and the film probably worked for a lot of kids who are growing/grew up with the game. I’m glad that I got a small something out of the film, and seeing Jack Black on the big screen is always a pleasure.</p>",
     isTopFilm: false
-  }  
+  },
+  {
+    id: "14",
+    slug: "sinners",
+    title: "Sinners",
+    year: 2025,
+    genres: ["Horror", "Drama", "Musical", "Historical"],
+    imageUrl: "/movies/sinners.jpeg?height=450&width=300",
+    rating: 4.5,
+    reviewDate: "2025-04-28",
+    fullReview: "<p>This film reminded me of how much I love going to see new and well-made films in the theaters. I definitely am finding myself hopping on the hype train for <em>Sinners</em>, but I believe there were a lot of good things about this one that made it deserve the hype it received. Ryan Coogler’s success story is an inspiration to any aspiring filmmaker (not referring to myself: I have no interest in making films), and it was wonderful to see the immediate success he’s encountered after releasing his best film yet.</p>\n\n<p>My go-to complaint when I dislike horror films is that the protagonists are forgettable. For most horror, this complaint tends to be pretty valid, as the main selling point of the film is the villain/slasher/demonic force and not their victims. As a result, it is tough to have any emotional reaction (other than disgust if the death is brutal) when major characters are slaughtered. That is not a problem that <em>Sinners</em> encounters. This stems primarily from the choice to spend the first almost half of the film assembling and developing our cast of characters. It is indeed almost exactly at the hour and fifteen minute mark of the two-and-a-half-hour film that the vampires are even introduced. With lesser films, audiences could easily be turned off by this slow start to a supposedly terrifying film. But because <em>Sinners</em> characters are so well-crafted and just plain interesting, it somehow avoids evoking this response.</p>\n\n<p>In writing the above paragraph, however, I’ve come to realize that <em>Sinners</em> isn’t just a typical horror film and indeed is not even just a horror film. Somehow, it manages to bridge genre gaps, resulting in something of a Horror/Period Piece/Musical with racial commentary. And because of the skillful combination of these four seemingly incompatible genres, <em>Sinners</em> is able to create a film that is genuinely unique and unlike any others I’ve seen before. Between the refreshing take on the vampire myth and musical numbers that are easily the best scenes in the film (you know the one I’m talking about), <em>Sinners</em> enters the ranks not only as a successful genre-hybrid film but as a successful film individually in each of these categories.</p>\n\n<p>Transitioning to nitpicks, there were very minor plot points that didn’t add up for me—vampires keeping promises and the KKK involvement—but given the story is about summoning demons with the power of music, I’m willing to suspend my disbelief and cut the film some slack in these areas. While none of the performances particularly blew me away, I was impressed with the film’s ability to ensure there was no confusion on who was who of the Michael B. Jordan twins. Smoke and Stack were distinct enough with their personalities, relationships, and wardrobes that this was not a problem.</p>\n\n<p>In case this wasn’t communicated, I was particularly impressed by this film. It is always wonderful seeing original stories driven by talented directors receive the mainstream appeal they deserve. And it was personally very wonderful to be able to support these types of films by seeing it in theaters. Go watch it while you can.</p>",
+    isTopFilm: false
+  }
+    
   
 ]
 
