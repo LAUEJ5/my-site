@@ -452,6 +452,13 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition3: "center 50%",
     objectPosition4: "center 60%"
   },
+  {
+    id: "29",
+    title: "I narrated a Dr. Suess book for a local orchestra",
+    date: "May 20, 2017",
+    imageUrl: "/videos/fun-stuff/recitation.mov",
+    type: "video"
+  }, 
 ]
 
 export const getFunStuffItems = (): FunStuffItem[] => {
