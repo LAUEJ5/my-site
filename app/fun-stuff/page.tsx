@@ -70,6 +70,45 @@ export default function FunStuffPage() {
                           />
                         </div>
                       </div>
+                    ) : item.type === "quad-photo" ? (
+                      <div className="w-full h-full relative grid grid-cols-2 grid-rows-2 gap-1">
+                        <div className="relative" style={{ aspectRatio: '1/1' }}>
+                          <Image
+                            src={item.imageUrl}
+                            alt={`${item.title} - Top left image`}
+                            fill
+                            className="rounded-tl-lg object-cover"
+                            style={{ objectPosition: item.objectPosition || "center center" }}
+                          />
+                        </div>
+                        <div className="relative" style={{ aspectRatio: '1/1' }}>
+                          <Image
+                            src={item.imageUrl2!}
+                            alt={`${item.title} - Top right image`}
+                            fill
+                            className="rounded-tr-lg object-cover"
+                            style={{ objectPosition: item.objectPosition2 || "center center" }}
+                          />
+                        </div>
+                        <div className="relative" style={{ aspectRatio: '1/1' }}>
+                          <Image
+                            src={item.imageUrl3!}
+                            alt={`${item.title} - Bottom left image`}
+                            fill
+                            className="rounded-bl-lg object-cover"
+                            style={{ objectPosition: item.objectPosition3 || "center center" }}
+                          />
+                        </div>
+                        <div className="relative" style={{ aspectRatio: '1/1' }}>
+                          <Image
+                            src={item.imageUrl4!}
+                            alt={`${item.title} - Bottom right image`}
+                            fill
+                            className="rounded-br-lg object-cover"
+                            style={{ objectPosition: item.objectPosition4 || "center center" }}
+                          />
+                        </div>
+                      </div>
                     ) : (
                       <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
                         <Image
