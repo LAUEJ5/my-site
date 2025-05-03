@@ -459,6 +459,25 @@ export const funStuffItems: FunStuffItem[] = [
     imageUrl: "/videos/fun-stuff/recitation.mov",
     type: "video"
   }, 
+  {
+    id: "30",
+    title: "I completed a 12 hour The Lord of the Rings Extended Edition Movie Marathon",
+    date: "December 12, 2024",
+    imageUrl: "/images/fun-stuff/lotr.jpeg",
+    objectPosition: "center 70%",
+    type: "image"
+  }, 
+  {
+    id: "31",
+    title: "I read all of Thoreau's Walden while spending an entire day in the woods",
+    date: "May 25, 2024",
+    imageUrl: "/images/fun-stuff/purg1.JPG",
+    imageUrl2: "/images/fun-stuff/purg2.JPG",
+    type: "dual-photo",
+    objectPosition: "75% 65%",
+    objectPosition2: "0% 30%"
+  },
+  
 ]
 
 export const getFunStuffItems = (): FunStuffItem[] => {
