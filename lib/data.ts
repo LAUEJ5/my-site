@@ -207,7 +207,7 @@ export const reviews: Review[] = [
   }
   
   
-  
+
 ]
 
 export const genres = [
@@ -515,6 +515,14 @@ export const funStuffItems: FunStuffItem[] = [
     type: "dual-photo",
     objectPosition: "75% 65%",
     objectPosition2: "0% 30%"
+  },
+  {
+    id: "32",
+    title: "I made it to the front page of my town's local paper during our annual New Years Polar Plunge",
+    date: "January 3, 2019",
+    imageUrl: "/images/fun-stuff/newyears.png",
+    objectPosition: "55% 60%",
+    type: "image"
   },
   
 ]

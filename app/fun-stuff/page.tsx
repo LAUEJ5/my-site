@@ -56,6 +56,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl}
                             alt={`${item.title} - First image`}
                             fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-t-lg md:rounded-l-lg md:rounded-tr-none object-cover"
                             style={{ objectPosition: item.objectPosition || "center center" }}
                           />
@@ -65,6 +69,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl2!}
                             alt={`${item.title} - Second image`}
                             fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-b-lg md:rounded-r-lg md:rounded-bl-none object-cover"
                             style={{ objectPosition: item.objectPosition2 || "center center" }}
                           />
@@ -77,6 +85,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl}
                             alt={`${item.title} - Top left image`}
                             fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-tl-lg object-cover"
                             style={{ objectPosition: item.objectPosition || "center center" }}
                           />
@@ -86,6 +98,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl2!}
                             alt={`${item.title} - Top right image`}
                             fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-tr-lg object-cover"
                             style={{ objectPosition: item.objectPosition2 || "center center" }}
                           />
@@ -95,6 +111,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl3!}
                             alt={`${item.title} - Bottom left image`}
                             fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-bl-lg object-cover"
                             style={{ objectPosition: item.objectPosition3 || "center center" }}
                           />
@@ -104,6 +124,10 @@ export default function FunStuffPage() {
                             src={item.imageUrl4!}
                             alt={`${item.title} - Bottom right image`}
                             fill
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                            priority={idx === 0}
+                            loading={idx === 0 ? "eager" : "lazy"}
+                            quality={85}
                             className="rounded-br-lg object-cover"
                             style={{ objectPosition: item.objectPosition4 || "center center" }}
                           />
@@ -115,6 +139,10 @@ export default function FunStuffPage() {
                           src={item.imageUrl}
                           alt={item.title}
                           fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority={idx === 0}
+                          loading={idx === 0 ? "eager" : "lazy"}
+                          quality={85}
                           className="rounded-lg object-cover"
                           style={{ objectPosition: item.objectPosition || "center center" }}
                         />
