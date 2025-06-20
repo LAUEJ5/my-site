@@ -245,7 +245,7 @@ export const reviews: Review[] = [
     id: "21",
     slug: "the-phoenician-scheme",
     title: "The Phoenician Scheme",
-    year: 2024,
+    year: 2025,
     genres: ["Comedy", "Drama"],
     imageUrl: "/movies/the_phoenician_scheme.jpg?height=450&width=300",
     rating: 3.5,
