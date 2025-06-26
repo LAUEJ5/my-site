@@ -587,6 +587,15 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition: "55% 30%",
     type: "image"
   },
+  {
+    id: "34",
+    title: "I camped in Yosemite",
+    date: "June 21, 2025",
+    imageUrl: "/images/fun-stuff/yosemite.JPEG",
+    objectPosition: "30% 70%",
+    type: "image"
+  },
+
   
 ]
 
