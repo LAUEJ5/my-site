@@ -595,6 +595,24 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition: "30% 70%",
     type: "image"
   },
+  {
+    id: "35",
+    title: "I stayed with nuns and volunteered in a family practice clinic in Jamaica",
+    date: "March 29, 2015",
+    imageUrl: "/images/fun-stuff/nuns1.jpeg",
+    imageUrl2: "/images/fun-stuff/nuns2.JPG",
+    type: "dual-photo",
+    objectPosition: "100% 65%",
+    objectPosition2: "10% 30%"
+  },
+  {
+    id: "34",
+    title: "I cliff jumped in Croatia (and this is the best photo I have)",
+    date: "June 27, 2019",
+    imageUrl: "/images/fun-stuff/cliff.jpeg",
+    objectPosition: "0% 100%",
+    type: "image"
+  },
 
   
 ]
