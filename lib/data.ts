@@ -262,7 +262,20 @@ export const reviews: Review[] = [
 
 <p>However, even if <em>The Phoenician Scheme</em> doesn't quite break new ground, it succeeds in doing what Wes Anderson does best: crafting a world so stylized, so distinctly his own, that we can't help but get lost in it. Yes, the quirks may feel recycled, and the romance might not quite land—but the heart, especially that of Zsa Zsa Korda, beats strong. For all its familiarity, the film reminded me why I keep returning to Anderson's work in the first place: not just for the aesthetic or the dry humor, but for the unexpected moments of tenderness hidden beneath the whimsy. And sometimes, that's enough.</p>`,
     isTopFilm: false
+  },
+  {
+    "id": "22",
+    "slug": "poor-things",
+    "title": "Poor Things",
+    "year": 2023,
+    "genres": ["Comedy", "Drama", "Fantasy"],
+    "imageUrl": "/movies/poor_things.jpg?height=450&width=300",
+    "rating": 4.5,
+    "reviewDate": "2025-06-30",
+    "fullReview": "<p>Man what a time. I enjoyed watching this film after its successful awards season as I can confidently say the praise and acclaim it received were well-deserved. <em>Poor Things</em> follows Emma Stone’s Bella Baxter—a lab experiment with a child’s brain in a woman’s body—as she explores everything the adult world has to offer with childlike innocence and genuine curiosity. On the way, she encounters characters like the brilliant yet twisted experimental surgeon Dr. Godwin Baxter (Willem Dafoe) and the hilarious yet despicably womanizing lawyer Duncan Wedderburn (Mark Ruffalo), who offer equally entertaining and insightful characterizations as our central protagonist.</p>\n\n<p><em>Poor Things</em> felt like a thought experiment, exploring what a child’s development might look like if they were not subjected to the typical prejudices and societal conformities imposed on anyone living in 1800s polite societies (or indeed in today’s modern world). As Bella embarks on her adventures, she approaches and experiences taboos like sex, gambling, drugs, prostitution, freedom of thought, and (yikes) even reading and somehow manages to arrive at measured and thoughtful insights. In each instance and without bias, she examines, thinks, forms her own conclusion, and moves on. This powerful statement is an indication that hate and disdain are very much learned traits and that curious contemplation and exploration are the best paths to acceptance. Even as a viewer, I found myself quite uncomfortable with the topics broached (there is a lot of very bizarre sex), while realizing this was the exact reaction director Yorgos Lanthimos was trying to elicit. In this way, the audience is forced to confront our own responses to the “shameful” activities of life and examine what teachings and biases formed our opinions.</p>\n\n<p>Yet on top of its thematic richness, <em>Poor Things</em> had many other things going for it. It worked as a comedy from Emma Stone’s matter-of-fact deliveries to the profanities uttered by Ruffalo amidst his polite and articulate speech. It worked as an endearing drama whose central performances not only garnered critical attention but managed to balance weight and levity. And it worked as a visual artform with beautiful and intentional cinematography directly mirroring Bella Baxter’s journey to enlightenment and maturity (from bleak to fantastical to realistic).</p>\n\n<p>Despite a few nit-picky issues I have—Bella’s maturation wasn’t as clean as I felt it should have been and the weird magnifying glass shots were not purposeful—I now know why this film was vehemently recommended to me by peers and friends. It made me laugh, it made me cringe, and it made me impressed with a very clear artistic and thematic vision. I look forward to revisiting this someday.</p>",
+    "isTopFilm": false
   }
+  
 ]
 
 export const genres = [
