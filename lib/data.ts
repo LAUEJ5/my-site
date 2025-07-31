@@ -686,6 +686,13 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition: "0% 100%",
     type: "image"
   },
+  {
+    id: "35",
+    title: "I flashed mobbed Google HQ",
+    date: "July 30, 2025",
+    imageUrl: "/videos/fun-stuff/flash-mob.mov",
+    type: "video"
+  },
 
   
 ]
