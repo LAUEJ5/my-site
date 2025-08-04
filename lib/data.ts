@@ -694,6 +694,15 @@ export const funStuffItems: FunStuffItem[] = [
     type: "video"
   },
 
+  {
+    id: "36",
+    title: "I swam from Alcatraz to San Francisco",
+    date: "August 3, 2025",
+    imageUrl: "/images/fun-stuff/alcatraz.jpeg",
+    objectPosition: "0% 45%",
+    type: "image"
+  },
+
   
 ]
 
