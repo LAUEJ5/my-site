@@ -454,14 +454,6 @@ export const funStuffItems: FunStuffItem[] = [
   },
   {
     id: "7",
-    title: "I started a nonprofit",
-    date: "March 10, 2021",
-    imageUrl: "/images/fun-stuff/nonprofit.jpeg",
-    objectPosition: "center top",
-    type: "image"
-  },
-  {
-    id: "8",
     title: "I ran a marathon",
     date: "February 16, 2025",
     imageUrl: "/images/fun-stuff/marathon.jpeg",
@@ -469,7 +461,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "9",
+    id: "8",
     title: "I put on my own puppet show",
     date: "January 22, 2012",
     imageUrl: "/images/fun-stuff/puppet.jpeg",
@@ -477,21 +469,21 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "10",
+    id: "9",
     title: "I paid attention in physics class",
     date: "October 6, 2020",
     imageUrl: "/videos/fun-stuff/physics.mp4",
     type: "video"
   },
   {
-    id: "11",
+    id: "10",
     title: "I learned to juggle",
     date: "July 21, 2021",
     imageUrl: "/videos/fun-stuff/juggle.mov",
     type: "video"
   },  
   {
-    id: "12",
+    id: "11",
     title: "I discovered I was bad at art",
     date: "October 10, 2021",
     imageUrl: "/images/fun-stuff/art.jpeg",
@@ -499,7 +491,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "13",
+    id: "12",
     title: "I dyed my hair purple",
     date: "February 15, 2022",
     imageUrl: "/images/fun-stuff/purple1.jpeg",
@@ -509,7 +501,7 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition2: "center 30%"
   },
   {
-    id: "14",
+    id: "13",
     title: "I was a wet floor sign for Halloween",
     date: "October 31, 2022",
     imageUrl: "/images/fun-stuff/wet-floor.jpeg",
@@ -517,7 +509,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "15",
+    id: "14",
     title: "I skied a black diamond",
     date: "January 6, 2024",
     imageUrl: "/images/fun-stuff/black-diamond.jpeg",
@@ -525,7 +517,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "16",
+    id: "15",
     title: "I roadtripped the East Coast",
     date: "August 20, 2024",
     imageUrl: "/images/fun-stuff/map.jpg",
@@ -535,7 +527,7 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition2: "center 30%"
   },
   {
-    id: "17",
+    id: "16",
     title: "I worked as a bartender",
     date: "July 7, 2023",
     imageUrl: "/images/fun-stuff/bartend.jpg",
@@ -543,14 +535,14 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "18",
+    id: "17",
     title: "I polar plunged in Walden Pond",
     date: "October 1, 2023",
     imageUrl: "/videos/fun-stuff/walden.mov",
     type: "video"
   },
   {
-    id: "19",
+    id: "18",
     title: "I was a campus tour guide",
     date: "September 4, 2022",
     imageUrl: "/images/fun-stuff/tourguide.png",
@@ -558,14 +550,14 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "20",
+    id: "19",
     title: "I built and painted a bench",
     date: "June 14, 2024",
     imageUrl: "/videos/fun-stuff/bench.mp4",
     type: "video"
   },
   {
-    id: "21",
+    id: "20",
     title: "I recited The Lorax at my graduation",
     date: "May 27, 2022",
     imageUrl: "/images/fun-stuff/gradspeech.png",
@@ -574,28 +566,28 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "22",
+    id: "21",
     title: "I sliced Halloween pumpkins with my family",
     date: "October 31, 2021",
     imageUrl: "/videos/fun-stuff/pumpkin.mov",
     type: "video"
   },  
   {
-    id: "23",
+    id: "22",
     title: "I celebrated Olivia Rodrigo's hit song 'Vampire' by dressing as one for her concert",
     date: "April 6, 2024",
     imageUrl: "/images/fun-stuff/vampire.jpeg",
     type: "image"
   },
   {
-    id: "24",
+    id: "23",
     title: "I killed my kindergarten dance performance (I'm on the far right)",
     date: "May 15, 2010",
     imageUrl: "/videos/fun-stuff/dance.mov",
     type: "video"
   },  
   {
-    id: "25",
+    id: "24",
     title: "I took up videography",
     date: "August 24, 2020",
     imageUrl: "/images/fun-stuff/videography.jpeg",
@@ -603,14 +595,14 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },  
   {
-    id: "26",
+    id: "25",
     title: "I lead my tennis team chants",
     date: "August 20, 2021",
     imageUrl: "/videos/fun-stuff/tennis.mov",
     type: "video"
   }, 
   {
-    id: "27",
+    id: "26",
     title: "I biked the Circuit of the Americas with my brothers",
     date: "May 30, 2023",
     imageUrl: "/images/fun-stuff/cota.jpeg",
@@ -618,7 +610,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   }, 
   {
-    id: "28",
+    id: "27",
     title: "I stayed up for 24 hours running 3 miles at the start and 1 mile every subsequent hour: a marathon in a day",
     date: "February 16, 2024",
     imageUrl: "/images/fun-stuff/run1.jpeg",
@@ -632,14 +624,14 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition4: "center 60%"
   },
   {
-    id: "29",
+    id: "28",
     title: "I narrated a Dr. Suess book for a local orchestra",
     date: "May 20, 2017",
     imageUrl: "/videos/fun-stuff/recitation.mov",
     type: "video"
   }, 
   {
-    id: "30",
+    id: "29",
     title: "I completed a 12 hour The Lord of the Rings Extended Edition Movie Marathon",
     date: "December 12, 2024",
     imageUrl: "/images/fun-stuff/lotr.jpeg",
@@ -647,7 +639,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   }, 
   {
-    id: "31",
+    id: "30",
     title: "I read all of Thoreau's Walden while spending an entire day in the woods",
     date: "May 25, 2024",
     imageUrl: "/images/fun-stuff/purg1.JPG",
@@ -657,7 +649,7 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition2: "0% 30%"
   },
   {
-    id: "32",
+    id: "31",
     title: "I made it to the front page of my town's local paper during our annual New Years Polar Plunge",
     date: "January 3, 2019",
     imageUrl: "/images/fun-stuff/newyears.png",
@@ -665,7 +657,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "33",
+    id: "32",
     title: "I ate nothing but beans for 7 days",
     date: "May 26, 2025",
     imageUrl: "/images/fun-stuff/beans.JPG",
@@ -673,7 +665,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "34",
+    id: "33",
     title: "I camped in Yosemite",
     date: "June 21, 2025",
     imageUrl: "/images/fun-stuff/yosemite.JPEG",
@@ -681,7 +673,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "35",
+    id: "34",
     title: "I stayed with nuns and volunteered in a family practice clinic in Jamaica",
     date: "March 29, 2015",
     imageUrl: "/images/fun-stuff/nuns1.jpeg",
@@ -691,7 +683,7 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition2: "10% 30%"
   },
   {
-    id: "34",
+    id: "35",
     title: "I cliff jumped in Croatia (and this is the best photo I have)",
     date: "June 27, 2019",
     imageUrl: "/images/fun-stuff/cliff.jpeg",
@@ -699,7 +691,7 @@ export const funStuffItems: FunStuffItem[] = [
     type: "image"
   },
   {
-    id: "35",
+    id: "36",
     title: "I flashed mobbed Google HQ",
     date: "July 30, 2025",
     imageUrl: "/videos/fun-stuff/flash-mob.mov",
@@ -707,7 +699,7 @@ export const funStuffItems: FunStuffItem[] = [
   },
 
   {
-    id: "36",
+    id: "37",
     title: "I swam from Alcatraz to San Francisco",
     date: "August 3, 2025",
     imageUrl: "/images/fun-stuff/alcatraz.jpeg",
