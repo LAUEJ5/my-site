@@ -718,6 +718,20 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition: "0% 45%",
     type: "image"
   },
+  {
+    id: "38",
+    title: "I summitted Mount Fuji",
+    date: "August 21, 2025",
+    imageUrl: "/images/fun-stuff/fuji1.JPG",
+    imageUrl2: "/images/fun-stuff/fuji2.JPG",
+    imageUrl3: "/images/fun-stuff/fuji3.JPG",
+    imageUrl4: "/images/fun-stuff/fuji4.JPG",
+    type: "quad-photo",
+    objectPosition: "center 30%",
+    objectPosition2: "center 40%",
+    objectPosition3: "center 50%",
+    objectPosition4: "center 60%"
+  },
 
   
 ]
