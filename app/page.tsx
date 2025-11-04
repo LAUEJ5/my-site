@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex-1 flex flex-col items-center gap-8 order-1 md:order-2">
             <div className="flex flex-col items-center gap-6">
               <Image
-                src="/images/jeremy_profile.jpeg"
+                src="/images/jeremy_profile_2024.jpeg"
                 alt="Jeremy's profile picture"
                 width={300}
                 height={300}
