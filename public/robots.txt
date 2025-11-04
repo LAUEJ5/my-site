@@ -1,7 +1,16 @@
 User-agent: *
-Allow: /
+# Block all pages except the home page
+Disallow: /reviews/
+Disallow: /fun-stuff/
+Disallow: /upload/
+Disallow: /api/
+
+# Block all images and videos
 Disallow: /images/
 Disallow: /videos/
+
+# Allow only the home page
+Allow: /$
 
 # Sitemap location (update with your actual sitemap URL if you have one)
 # Sitemap: https://yourdomain.com/sitemap.xml
