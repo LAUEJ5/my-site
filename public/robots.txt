@@ -15,3 +15,4 @@ Allow: /$
 # Sitemap location (update with your actual sitemap URL if you have one)
 # Sitemap: https://yourdomain.com/sitemap.xml
 
+
