@@ -756,7 +756,14 @@ export const funStuffItems: FunStuffItem[] = [
     objectPosition3: "center 50%",
     objectPosition4: "center 60%"
   },
-
+  {
+    id: "39",
+    title: "I finished an Ironman triathlon",
+    date: "November 16, 2025",
+    imageUrl: "/images/fun-stuff/ironman.jpg",
+    objectPosition: "center 100%",
+    type: "image"
+  }
   
 ]
 
